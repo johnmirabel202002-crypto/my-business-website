@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211816">
+  <meta name="description" content="Nail'e Luxury Press-On Nails — handcrafted press-on sets designed for your signature style.">
+  <title>Nail'e | Luxury Press-On Nails</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--gold:#d4a373;--champagne:#e9d8a6;--cream:#fdfbf7;--blush:#f4d6d8;--rose:#b76e79;--bg:#1e1816;--card:#29211e;--muted:#c8bcb4;--serif:'Playfair Display',Georgia,serif;--sans:'Plus Jakarta Sans',Arial,sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{background:var(--bg);color:var(--cream);font-family:var(--sans);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    .announcement{padding:10px 14px;text-align:center;background:#120e0d;color:var(--champagne);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
+    header{position:sticky;top:0;z-index:20;background:#1e1816ed;backdrop-filter:blur(14px);border-bottom:1px solid #d4a37330}
+    nav{max-width:1200px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{font:600 1.8rem var(--serif);letter-spacing:.02em;color:var(--blush)}
+    .logo small{display:block;text-align:center;font:500 .48rem var(--sans);letter-spacing:.3em;color:var(--gold);margin-top:4px}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-links a{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#e5d8d0;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .menu-btn{display:none;background:none;border:1px solid #d4a37370;color:var(--cream);padding:8px 11px;font-size:1.1rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#211816;border:1px solid var(--gold);padding:14px 20px;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transition:all .25s;cursor:pointer}
+    .btn:hover{background:transparent;color:var(--gold)}
+    .btn-outline{background:transparent;color:var(--cream);border-color:#d4a3738c}
+    .btn-outline:hover{background:var(--gold);color:#211816}
+    .hero{max-width:1200px;margin:auto;padding:75px 5% 85px;min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:7%}
+    .eyebrow{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+    h1{font:400 clamp(3.2rem,6vw,5.5rem)/1.04 var(--serif);letter-spacing:-.04em;margin:20px 0}
+    h1 em,.section-heading em{font-weight:400;color:var(--blush)}
+    .hero-copy>p{max-width:470px;color:var(--muted);font-size:.86rem;line-height:1.95}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+    .hero-points{display:flex;gap:17px;flex-wrap:wrap;border-top:1px solid #ffffff20;margin-top:36px;padding-top:20px;color:var(--muted);font-size:.68rem}
+    .hero-points span:before{content:'✧ ';color:var(--gold)}
+    .hero-art{position:relative;min-height:480px;display:grid;place-items:center}
+    .hero-frame{position:absolute;inset:12px 0 0 17px;border:1px solid var(--gold);border-radius:48% 48% 0 0}
+    .hero-photo{position:relative;width:88%;height:465px;border-radius:48% 48% 0 0;overflow:hidden;background:#59413a}
+    .hero-photo img{transition:transform .7s}
+    .hero-photo:hover img{transform:scale(1.04)}
+    .seal{position:absolute;bottom:10px;left:0;width:110px;height:110px;border-radius:50%;background:var(--blush);color:#382322;display:grid;place-content:center;text-align:center;font:italic 1rem/1.4 var(--serif);transform:rotate(-8deg);border:4px solid var(--bg)}
+    .seal small{font:500 .48rem var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:5px}
+    section{padding:82px 5%}
+    .inner{max-width:1100px;margin:auto}
+    .section-heading{text-align:center;max-width:650px;margin:0 auto 42px}
+    .section-heading h2{font:400 clamp(2.2rem,4.5vw,3.5rem)/1.13 var(--serif);margin:14px 0}
+    .section-heading p{font-size:.82rem;line-height:1.9;color:var(--muted);max-width:570px;margin:auto}
+    .collection{background:#f7eee7;color:#2a201d}
+    .collection .section-heading p{color:#786760}
+    .collection .eyebrow{color:#96636a}
+    .products-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+    .product-card{background:#fffaf5;border:1px solid #d4a37355;overflow:hidden;transition:transform .3s,box-shadow .3s}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #38251c16}
+    .product-img-wrap{height:320px;position:relative;overflow:hidden;background:#ead7d2}
+    .product-img{transition:transform .5s}
+    .product-card:hover .product-img{transform:scale(1.045)}
+    .product-label{position:absolute;top:13px;left:13px;background:#fbf5ef;color:#704b4d;padding:8px 10px;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase}
+    .product-info{padding:20px}
+    .product-title{font:500 1.35rem var(--serif);margin-bottom:8px;color:#352522}
+    .product-description{font-size:.75rem;color:#86736b;line-height:1.7;min-height:38px}
+    .product-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:17px 0}
+    .product-price{font:500 1.2rem var(--serif);color:#9b5b62}
+    .stock-note{font-size:.6rem;color:#8a716a}
+    .btn-whatsapp{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;background:#276749;color:white;font-size:.7rem;font-weight:700;letter-spacing:.04em;transition:background .2s}
+    .btn-whatsapp:hover{background:#1e5139}
+    .features{background:var(--bg)}
+    .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+    .feature-box{padding:28px 16px;text-align:center;border:1px solid #d4a37330;background:var(--card)}
+    .feature-icon{font-size:1.5rem;color:var(--gold);margin-bottom:12px}
+    .feature-box h3{font:500 1.05rem var(--serif);margin-bottom:8px}
+    .feature-box p{font-size:.7rem;line-height:1.7;color:var(--muted)}
+    .story{background:#2a201d}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
+    .story-photo{height:410px;overflow:hidden;border:1px solid #d4a37370}
+    .story-copy h2{font:400 clamp(2.4rem,4vw,3.7rem)/1.12 var(--serif);margin:15px 0 20px}
+    .story-copy p{margin-bottom:14px}
+    .story-copy .btn{margin-top:12px}
+    .guide{background:#f7eee7;color:#2b211e}
+    .guide .section-heading p{color:#786760}
+    .guide .eyebrow{color:#96636a}
+    .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .step{padding:24px 20px;background:#fffaf5;border:1px solid #d4a37355}
+    .step-number{font:italic 2rem var(--serif);color:#b76e79;margin-bottom:13px}
+    .step h3{font:500 1.12rem var(--serif);margin-bottom:9px}
+    .step p{font-size:.73rem;line-height:1.8;color:#786760}
+    .contact{background:var(--bg)}
+    .contact-card{max-width:760px;margin:auto;text-align:center;border:1px solid #d4a37370;padding:45px 25px;background:linear-gradient(145deg,#29211e,#211916)}
+    .contact-card h3{font:400 clamp(2rem,4vw,3rem) var(--serif);margin:13px 0}
+    .contact-card p{max-width:500px;margin:0 auto;color:var(--muted);font-size:.8rem;line-height:1.9}
+    .contact-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+    footer{padding:35px 5%;text-align:center;background:#120e0d;color:#b9aaa0}
+    .footer-logo{font:600 2rem var(--serif);color:var(--blush)}
+    .footer-sub{font-size:.6rem;letter-spacing:.24em;color:var(--gold);margin:8px 0 16px}
+    .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0}
+    .footer-links a{font-size:.7rem}
+    .copyright{font-size:.62rem;letter-spacing:.08em;margin-top:22px;color:#8d7e75}
+    @media(min-width:1000px){.products-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.product-card:nth-child(4),.product-card:nth-child(5){transform:translateX(52%)}.product-card:nth-child(4):hover,.product-card:nth-child(5):hover{transform:translate(52%,-5px)}}
+    @media(max-width:850px){.nav-links{gap:13px}.nav-links a{font-size:.58rem}.hero{gap:4%;padding-top:55px}.hero-art{min-height:400px}.hero-photo{height:390px}.products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card:nth-child(5){grid-column:1/-1;max-width:calc(50% - 12px);width:100%;justify-self:center}.features-grid,.guide-grid{grid-template-columns:repeat(2,1fr)}.story-grid{gap:5%}}
+    @media(max-width:620px){.announcement{font-size:.55rem;letter-spacing:.12em}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#1e1816;padding:20px 6% 25px;flex-direction:column;align-items:stretch;border-bottom:1px solid #d4a37355}.nav-links.open{display:flex}.nav-links a{font-size:.7rem;padding:8px 0}.menu-btn{display:block}.nav-order{display:none}nav{padding:13px 5%}.hero{grid-template-columns:1fr;padding:55px 6% 65px;gap:25px}.hero-copy{text-align:center}.hero-copy>p{margin:auto}.hero-actions{justify-content:center}.hero-points{justify-content:center;gap:12px}.hero-art{min-height:355px}.hero-photo{height:340px;width:82%}.hero-frame{left:9%;right:4%;height:340px}.seal{width:90px;height:90px;font-size:.85rem;left:3px}.seal small{font-size:.42rem}section{padding:62px 6%}.section-heading{margin-bottom:30px}.products-grid{gap:14px}.product-img-wrap{height:230px}.product-info{padding:14px}.product-title{font-size:1.12rem}.product-description{font-size:.68rem}.product-bottom{align-items:flex-start;flex-direction:column;gap:5px}.product-price{font-size:1.08rem}.btn-whatsapp{font-size:.62rem;padding:12px 6px}.product-card:nth-child(5){grid-column:auto;max-width:none}.features-grid{gap:10px}.feature-box{padding:22px 10px}.feature-box h3{font-size:.98rem}.feature-box p{font-size:.65rem}.story-grid{grid-template-columns:1fr;gap:28px}.story-photo{height:300px}.story-copy{text-align:center}.guide-grid{gap:10px}.step{padding:20px 15px}.contact-card{padding:35px 18px}}
+    @media(max-width:390px){.products-grid{grid-template-columns:1fr}.product-img-wrap{height:310px}.product-bottom{flex-direction:row;align-items:center}.product-card:nth-child(5){grid-column:auto}.features-grid,.guide-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:3rem}}
+  </style>
+</head>
+<body>
+  <div class="announcement">A little luxury for your fingertips ✦ Handcrafted with care</div>
+  <header>
+    <nav>
+      <a class="logo" href="#home">Nail'e<small>LUXURY PRESS-ON NAILS</small></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#collection">Collection</a>
+        <a href="#about">Our Story</a>
+        <a href="#benefits">Why Nail'e</a>
+        <a href="#application">How to Apply</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn nav-order" href="#collection">Shop the sets</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">Your beauty, your signature</div>
+        <h1>Handcrafted<br><em>Luxury.</em><br>Made for you.</h1>
+        <p>Slay effortlessly with Nail'e luxury press-on nails. From delicate bows and timeless French tips to statement floral art, discover salon-inspired beauty designed to make every moment feel special.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#collection">Explore the collection <span>↗</span></a>
+          <a class="btn btn-outline" href="#about">Discover Nail'e</a>
+        </div>
+        <div class="hero-points"><span>Premium quality</span><span>Reusable sets</span><span>Easy application</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-frame"></div>
+        <div class="hero-photo">
+          <img src="IMG_1430.jpeg" alt="Nail'e signature luxury press-on nail design" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85';">
+        </div>
+        <div class="seal">Beauty in<br>every detail<small>Nail'e studio</small></div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="inner">
+        <div class="section-heading">
+          <div class="eyebrow">The Nail'e edit</div>
+          <h2>Our Exclusive <em>Collection</em></h2>
+          <p>Find your signature set. Whether you love soft romantic details or timeless elegance, your next favourite set is waiting here.</p>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-img-wrap"><img class="product-img" src="IMG_1430.jpeg" alt="Signature Pink and Bow press-on nails" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=85';"><span class="product-label">Customer favourite</span></div>
+            <div class="product-info"><h3 class="product-title">Signature Pink &amp; Bow Set</h3><p class="product-description">Soft pink tones with pretty bow details for a romantic finish.</p><div class="product-bottom"><span class="product-price">₦5,000</span><span class="stock-note">Made to stand out</span></div><a class="btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/2348146803668?text=Hello%20Nail%27e%2C%20I%20want%20to%20order%20the%20Signature%20Pink%20%26%20Bow%20Set%20for%20%E2%82%A65%2C000">Order via WhatsApp ↗</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-img-wrap"><img class="product-img" src="IMG_1431.jpeg" alt="Classic French and Pearls press-on nails" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=85';"><span class="product-label">Timeless elegance</span></div>
+            <div class="product-info"><h3 class="product-title">Classic French &amp; Pearls</h3><p class="product-description">A polished French finish elevated with delicate pearl details.</p><div class="product-bottom"><span class="product-price">₦5,000</span><span class="stock-note">Classic, always</span></div><a class="btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/2348146803668?text=Hello%20Nail%27e%2C%20I%20want%20to%20order%20the%20Classic%20French%20%26%20Pearls%20set%20for%20%E2%82%A65%2C000">Order via WhatsApp ↗</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-img-wrap"><img class="product-img" src="IMG_1432.jpeg" alt="Royal Burgundy Floral Art press-on nails" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=800&q=85';"><span class="product-label">Statement set</span></div>
+            <div class="product-info"><h3 class="product-title">Royal Burgundy Floral Art</h3><p class="product-description">Rich burgundy colour and floral artistry with a luxe feel.</p><div class="product-bottom"><span class="product-price">₦5,000</span><span class="stock-note">Bold and elegant</span></div><a class="btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/2348146803668?text=Hello%20Nail%27e%2C%20I%20want%20to%20order%20the%20Royal%20Burgundy%20Floral%20Art%20set%20for%20%E2%82%A65%2C000">Order via WhatsApp ↗</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-img-wrap"><img class="product-img" src="IMG_1434.jpeg" alt="Blush Pink 3D Flower Glam press-on nails" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85';"><span class="product-label">Romantic details</span></div>
+            <div class="product-info"><h3 class="product-title">Blush Pink 3D Flower Glam</h3><p class="product-description">Blush-pink beauty with dimensional floral details.</p><div class="product-bottom"><span class="product-price">₦5,000</span><span class="stock-note">Pretty from every angle</span></div><a class="btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/2348146803668?text=Hello%20Nail%27e%2C%20I%20want%20to%20order%20the%20Blush%20Pink%203D%20Flower%20Glam%20set%20for%20%E2%82%A65%2C000">Order via WhatsApp ↗</a></div>
+          </article>
+          <article class="product-card">
+            <div class="product-img-wrap"><img class="product-img" src="IMG_1435.jpeg" alt="Crystal Shimmer French press-on nails" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=85';"><span class="product-label">A touch of sparkle</span></div>
+            <div class="product-info"><h3 class="product-title">Crystal Shimmer French</h3><p class="product-description">Classic French-inspired nails with a subtle crystal shimmer.</p><div class="product-bottom"><span class="product-price">₦5,000</span><span class="stock-note">Ready for your moment</span></div><a class="btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/2348146803668?text=Hello%20Nail%27e%2C%20I%20want%20to%20order%20the%20Crystal%20Shimmer%20French%20set%20for%20%E2%82%A65%2C000">Order via WhatsApp ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="benefits">
+      <div class="inner">
+        <div class="section-heading"><div class="eyebrow">The little things matter</div><h2>Why You'll Love <em>Nail'e</em></h2><p>Beautiful details, a comfortable routine, and designs that let your personal style shine.</p></div>
+        <div class="features-grid">
+          <div class="feature-box"><div class="feature-icon">✧</div><h3>Trendy Designs</h3><p>Artful styles for everyday beauty and special occasions.</p></div>
+          <div class="feature-box"><div class="feature-icon">♡</div><h3>Easy to Apply</h3><p>A simple way to complete your look at home.</p></div>
+          <div class="feature-box"><div class="feature-icon">⟳</div><h3>Reusable Sets</h3><p>Care for your set and enjoy it again.</p></div>
+          <div class="feature-box"><div class="feature-icon">♕</div><h3>Premium Feel</h3><p>Thoughtful details made to feel extra special.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="about">
+      <div class="inner story-grid">
+        <div class="story-photo"><img src="IMG_1434.jpeg" alt="A close look at Nail'e nail art" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85';"></div>
+        <div class="story-copy"><div class="eyebrow">The Nail'e feeling</div><h2>Little details.<br><em>Lasting elegance.</em></h2><p>Nail'e is for anyone who loves a polished look and the confidence that comes with those little finishing touches.</p><p>From romantic bows to classic French-inspired styles, our press-on collection brings salon-inspired beauty into your everyday routine and special moments.</p><a class="btn" href="#collection">Find your favourite set ↗</a></div>
+      </div>
+    </section>
+
+    <section class="guide" id="application">
+      <div class="inner">
+        <div class="section-heading"><div class="eyebrow">Your at-home nail ritual</div><h2>4 Steps to <em>Salon Perfection</em></h2><p>Take your time, follow the instructions included with your nail set, and enjoy your finished look.</p></div>
+        <div class="guide-grid">
+          <article class="step"><div class="step-number">01</div><h3>Prep Your Nails</h3><p>Start with clean, dry natural nails. Gently care for your cuticles and remove any oils from the nail surface.</p></article>
+          <article class="step"><div class="step-number">02</div><h3>Choose Your Sizes</h3><p>Match each press-on nail to the correct finger before you begin applying the set.</p></article>
+          <article class="step"><div class="step-number">03</div><h3>Apply Carefully</h3><p>Use the nail adhesive or sticky tabs according to the product instructions and avoid contact with skin.</p></article>
+          <article class="step"><div class="step-number">04</div><h3>Enjoy Your Set</h3><p>Position each nail carefully and press as directed by the adhesive instructions. Keep your set safe for reuse.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="inner">
+        <div class="contact-card"><div class="eyebrow">Your next set is calling</div><h3>A little note to Nail'e</h3><p>Ready to order, ask about available designs, or get help choosing a set? Send us a message and let's make your next nail moment special.</p><div class="contact-actions"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/2348146803668?text=Hello%20Nail%27e%2C%20I%27d%20like%20to%20ask%20about%20your%20press-on%20nails.">WhatsApp Nail'e ↗</a><a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.snapchat.com/add/mirabeljohn26">Find us on Snapchat ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Nail'e</div>
+    <div class="footer-sub">LUXURY PRESS-ON NAILS</div>
+    <p>Little details. Lasting elegance.</p>
+    <div class="footer-links"><a href="#collection">Collection</a><a href="#about">Our story</a><a href="#application">Application guide</a><a href="#contact">Contact</a></div>
+    <p>WhatsApp: +234 814 680 3668</p>
+    <p>Snapchat: @mirabeljohn26</p>
+    <div class="copyright">© <span id="year"></span> NAIL'E. MADE WITH CARE.</div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+  </script>
+</body>
+</html>
